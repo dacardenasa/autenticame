@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1='Register Form'
-  div.container
+  .container
     form(action='/register', method='POST', class='user_form', autocompĺete='off')
       label(for='name')='Name'
       input(type='text', class='input-form', name='name', id='name', required)
@@ -11,4 +11,5 @@ block content
       label(for='password')='Password'
       input(type='password', class='input-form', name='password', id='password', required)
       .form-control
+        a(href='/')='Home'
         button(type='submit')='Register'
