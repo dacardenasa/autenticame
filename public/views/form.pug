@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1='Register Form'
+  div.container
+    form(action='/register', method='POST', class='user_form', autocompĺete='off')
+      label(for='name')='Name'
+      input(type='text', class='input-form', name='name', id='name', required)
+      label(for='email')='Email'
+      input(type='email', class='input-form', name='email', id='email', required)
+      label(for='password')='Password'
+      input(type='password', class='input-form', name='password', id='password', required)
+      .form-control
+        button(type='submit')='Register'

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1='Login Form'
+  .container
+    form(action='/login', method='POST' class='user_form', autocompĺete='off')
+      label(for='email')='Email'
+      input(type='email', class='input-form', name='email' id='email', required)
+      label(for='password')='Password'
+      input(type='password', class='input-form', name='password' id='password', required)
+      .form-control
+        a(href='/register')='Register'
+        button(type='submit')='login'
+    if error
+      .error
+        h3=error
