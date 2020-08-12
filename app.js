@@ -97,6 +97,5 @@ app.get("/logout", (req, res) => {
   return res.render("login");
 });
 
-const port = process.env.PORT || 3000;
 // Deploy NodeJS Server
-app.listen(port, () => console.log(`Listening on Port ${port}`));
+app.listen(3000, () => console.log("Listening on Port 3000!"));
