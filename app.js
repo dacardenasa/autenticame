@@ -4,8 +4,8 @@ const cookieSession = require("cookie-session");
 const bcrypt = require("bcrypt");
 const User = require("./models/user");
 const app = express();
-const port = 3000;
 require("dotenv").config();
+const port = process.env.PORT || 3000;
 
 // Set config template engine pug
 app.set("view engine", "pug");
