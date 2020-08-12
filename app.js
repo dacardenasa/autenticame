@@ -30,7 +30,7 @@ mongoose.connect(
   { useNewUrlParser: true }
 );
 
-mongoose.connection.on("error", (error) => console.error(error.message));
+// mongoose.connection.on("error", (error) => console.error(error.message));
 
 // Middleware to handle start session into selected routes
 const requireUser = async (req, res, next) => {
