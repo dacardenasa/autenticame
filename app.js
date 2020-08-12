@@ -48,7 +48,7 @@ app.get("/", requireUser, async (req, res) => {
   res.render("index", { users: users });
 });
 
-app.get("/register", requireUser, (req, res) => {
+app.get("/register", (req, res) => {
   res.render("form");
 });
 

@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/dacardenasa/autenticame#readme",
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "bcrypt": "^3.0.0",
     "cookie-session": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
