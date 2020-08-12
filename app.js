@@ -19,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 // Use config to use cookies to save session
 app.use(
   cookieSession({
+    keys: ['key1', 'key2'],
     maxAge: 24 * 60 * 60 * 1000,
   })
 );
