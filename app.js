@@ -5,7 +5,6 @@ const bcrypt = require("bcrypt");
 const User = require("./models/user");
 const app = express();
 require("dotenv").config();
-const port = process.env.PORT || 3000;
 
 // Set config template engine pug
 app.set("view engine", "pug");
@@ -20,7 +19,6 @@ app.use(express.urlencoded({ extended: true }));
 // Use config to use cookies to save session
 app.use(
   cookieSession({
-    secret: "lorem ipsum dolor",
     maxAge: 24 * 60 * 60 * 1000,
   })
 );
@@ -99,5 +97,6 @@ app.get("/logout", (req, res) => {
   return res.render("login");
 });
 
+const port = process.env.PORT || 3000;
 // Deploy NodeJS Server
 app.listen(port, () => console.log(`Listening on Port ${port}`));
