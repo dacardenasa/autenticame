@@ -28,7 +28,7 @@ app.use(
 mongoose.connect(
   process.env.MONGODB_URL || "mongodb://127.0.0.1:27017/mongo-1",
   { useNewUrlParser: true }
-);
+).catch( error => handleError(error) );
 
 // Middleware to handle start session into selected routes
 const requireUser = async (req, res, next) => {
