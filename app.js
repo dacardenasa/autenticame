@@ -26,11 +26,9 @@ app.use(
 
 // Handle DB conection
 mongoose.connect(
-  process.env.MONGODB_URL || "mongodb://localhost:27017/mongo-1",
+  process.env.MONGODB_URL || "mongodb://127.0.0.1:27017/mongo-1",
   { useNewUrlParser: true }
 );
-
-// mongoose.connection.on("error", (error) => console.error(error.message));
 
 // Middleware to handle start session into selected routes
 const requireUser = async (req, res, next) => {
